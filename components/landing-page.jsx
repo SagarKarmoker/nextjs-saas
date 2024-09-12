@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, CheckCircle, Image, Video, Zap } from "lucide-react";
 
-export default function LandingPage() {
+export function LandingPage() {
   return (
     (<div className="flex flex-col min-h-screen bg-[#16325B] text-white">
       <header className="px-4 lg:px-6 h-14 flex items-center border-b border-[#227B94]">
@@ -32,7 +32,7 @@ export default function LandingPage() {
           </a>
         </nav>
       </header>
-      <main className="container mx-auto">
+      <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
