@@ -23,7 +23,7 @@ export async function POST(request) {
 
     try {
         const formData = await request.formData();
-        const file = formData.get('file') || null;
+        const file = formData.get('file');
 
         if (!file) {
             return NextResponse.json({
@@ -53,7 +53,9 @@ export async function POST(request) {
             upload_stream.end(buffer);
         })
 
-        return NextResponse.json({ publicId: result.public_id }, {
+        console.log(result)
+
+        return NextResponse.json({ publicId: result.public_id, url: result.secure_url }, {
             status: 200
         })
     } catch (error) {
