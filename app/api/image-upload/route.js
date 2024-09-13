@@ -53,7 +53,7 @@ export async function POST(request) {
             upload_stream.end(buffer);
         })
 
-        console.log(result)
+        // console.log(result)
 
         return NextResponse.json({ publicId: result.public_id, url: result.secure_url }, {
             status: 200
